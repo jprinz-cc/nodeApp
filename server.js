@@ -19,7 +19,9 @@ function send404(response) {
 
 var mimeLookup = {
     '.js': 'application/javascript',
-    '.html': 'text/html'
+    '.html': 'text/html',
+    '.css': 'text/css',
+    '.gif': 'image/gif'
 };
 
 var server = http.createServer(function (req, res) {
