@@ -12,9 +12,11 @@ var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 
 
 function send404(response) {
-    response.writeHead(404, { 'Content-Type': 'text/plain' });
+    /*response.writeHead(404, { 'Content-Type': 'text/plain' });
     response.write('Error 404: Resource not found.');
-    response.end();
+    response.end();*/
+    response.writeHead(200, { 'content-type': 'text/html' });
+    fs.createReadStream('./public/404.html').pipe(response);
 }
 
 var mimeLookup = {
