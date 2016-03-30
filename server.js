@@ -23,7 +23,8 @@ var mimeLookup = {
     '.js': 'application/javascript',
     '.html': 'text/html',
     '.css': 'text/css',
-    '.gif': 'image/gif'
+    '.gif': 'image/gif',
+    '.jpg': 'image/jpg'
 };
 
 var server = http.createServer(function (req, res) {
